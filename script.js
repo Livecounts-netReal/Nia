@@ -43,9 +43,9 @@ setInterval(() => {
 
       const image = document.getElementById("image");
       image.src =
-        data.snippet.thumbnails[2].url ||
-        data.snippet.thumbnails[1].url ||
-        data.snippet.thumbnails[0].url;
+        data.snippet.thumbnails.high.url ||
+        data.snippet.thumbnails.medium.url ||
+        data.snippet.thumbnails.default.url;
       image.alt = data.snippet.title;
       document.getElementById("subscribers").innerHTML = data.estSubCount;
       document.getElementById("goal").innerHTML = GetGoal(data.estSubCount);
